@@ -12,6 +12,7 @@ export class ListCocktailsComponent implements OnInit {
 
   cocktailGlassCocktails: Drink[] = [];
   ordinaryDrinkCocktails: Drink[] = [];
+  
 
   constructor(private cocktailService: CocktailsService, private router: Router) {}
 

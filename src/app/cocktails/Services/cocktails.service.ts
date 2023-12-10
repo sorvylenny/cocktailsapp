@@ -19,8 +19,13 @@ private baseUrl: string= environment.baseUrl;
     return this.http.get<Cocktails>(url);
   }
 
-  getCocktailsByCategory(category: string): Observable<Cocktails> {
-    const url = `${this.baseUrl}/filter.php?c=${category}`;
+  getCocktailsByCategory(Ordinary_Drink: string): Observable<Cocktails> {
+    const url = `${this.baseUrl}/filter.php?c=${Ordinary_Drink}`;
+    return this.http.get<Cocktails>(url);
+  }
+
+  getCocktailsByAlcoholic(Alcoholic: string): Observable<Cocktails> {
+    const url = `${this.baseUrl}/filter.php?c=${Alcoholic}`;
     return this.http.get<Cocktails>(url);
   }
   getCocktailDetailsById(cocktailId: string): Observable<CocktailDetails> {
