@@ -1,4 +1,16 @@
-<mat-tab-group>
+<div class="Input">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Buscar</mat-label>
+    <input matInput (keyup.enter)="appSearchTable(input.value)" #input>
+  </mat-form-field>
+</div>
+
+<!-- Sección para mostrar el término de búsqueda -->
+<div *ngIf="searchTerm">
+  <h3>Término de búsqueda: {{ searchTerm }}</h3>
+</div>
+
+<mat-tab-group  (selectedIndexChange)="tabChanged($event)">
   <!-- First Tab: Cocktails by Glass Type -->
   <mat-tab label="Cocktails by Glass Type">
     <div class="card-container">
@@ -35,3 +47,19 @@
     </div>
   </mat-tab>
 </mat-tab-group>
+
+<!-- Sección para mostrar los resultados de búsqueda -->
+<div *ngIf="dataCocktails.length > 0">
+  <div *ngFor="let cocktail of dataCocktails">
+    <mat-card class="example-card">
+      <img mat-card-image [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}">
+      <mat-card-content>
+        <p>{{ cocktail.strDrink }}</p>
+        <h3></h3>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="viewDetails(cocktail.idDrink)">More</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
