@@ -1,3 +1,23 @@
+
+p{
+  color: white;
+  text-align: center;
+  font-family:'PT Serif, serif';
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.cocktail-header {
+  display: flex;
+  align-items: center;
+}
+
+.left-image,
+.right-image {
+  max-width: 350px;
+  height: auto;
+  margin: 0 10px;
+}
+
 .Input{
   width: 100%;
 }

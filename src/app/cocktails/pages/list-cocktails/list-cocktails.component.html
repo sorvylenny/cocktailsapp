@@ -1,3 +1,14 @@
+<mat-card>
+  <p>Cocktails</p>
+  <div class="cocktail-header">
+    <img class="left-image" src="https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg" alt="">
+    <p class="title">
+      It is an app only to see cocktails and the ingredients of each one.
+    </p>
+    <img class="right-image" src="https://www.thecocktaildb.com/images/media/drink/ypxsqy1483387829.jpg" alt="">
+  </div>
+</mat-card>
+
 <div class="Input">
   <mat-form-field appearance="fill" class="full-width">
     <mat-label>Buscar</mat-label>
@@ -6,7 +17,7 @@
 </div>
 
 <!-- Sección para mostrar el término de búsqueda -->
-<div *ngIf="searchTerm">
+<div class="message" *ngIf="searchTerm">
   <h3>Término de búsqueda: {{ searchTerm }}</h3>
 </div>
 
@@ -16,10 +27,9 @@
     <div class="card-container">
       <div *ngFor="let cocktail of cocktailGlassCocktails">
         <mat-card class="example-card">
-          <img mat-card-image [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}">
+          <img mat-card-image [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}" (click)="viewDetails(cocktail.idDrink)">
           <mat-card-content>
-            <p>{{ cocktail.strDrink }}</p>
-            <h3></h3>
+            <strong>{{ cocktail.strDrink }}</strong>
           </mat-card-content>
           <mat-card-actions>
             <button mat-button (click)="viewDetails(cocktail.idDrink)">More</button>
@@ -34,32 +44,15 @@
     <div class="card-container">
       <div *ngFor="let cocktail of ordinaryDrinkCocktails">
         <mat-card class="example-card">
-          <img mat-card-image [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}">
+          <img mat-card-image [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}" (click)="viewDetails(cocktail.idDrink)">
           <mat-card-content>
-            <p>{{ cocktail.strDrink }}</p>
-            <h3></h3>
+            <strong>{{ cocktail.strDrink }}</strong>
           </mat-card-content>
           <mat-card-actions>
             <button mat-button (click)="viewDetails(cocktail.idDrink)">More</button>
           </mat-card-actions>
         </mat-card>
       </div>
-    </div>
+      </div>
   </mat-tab>
 </mat-tab-group>
-
-<!-- Sección para mostrar los resultados de búsqueda -->
-<div *ngIf="dataCocktails.length > 0">
-  <div *ngFor="let cocktail of dataCocktails">
-    <mat-card class="example-card">
-      <img mat-card-image [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}">
-      <mat-card-content>
-        <p>{{ cocktail.strDrink }}</p>
-        <h3></h3>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button (click)="viewDetails(cocktail.idDrink)">More</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-</div>

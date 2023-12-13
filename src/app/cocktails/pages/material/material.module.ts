@@ -13,6 +13,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { FormsModule } from '@angular/forms';
 
@@ -35,6 +36,7 @@ import { FormsModule } from '@angular/forms';
   MatTabsModule,
   MatTooltipModule,
   MatToolbarModule,
+  MatPaginatorModule,
   MatProgressBarModule,
 
 
