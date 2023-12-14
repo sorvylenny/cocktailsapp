@@ -47,7 +47,8 @@ p{
   font-size: 15px;
   text-align: justify;
   font-family: 'PT Serif', serif;
-  color: black;
+  color: black
+
 }
 
 button {
@@ -92,12 +93,6 @@ button:hover::before {
     transform: rotateY(360deg);
   }
 }
-
-
-.custom-primary {
-  background-color: #f5eed4;
-}
-
 .container{
   display: flex;
   justify-content: flex-end;
@@ -106,11 +101,7 @@ button:hover::before {
 }
 .example-button-row {
   display: table-cell;
-  max-width: 600px;
-}
-
-.example-button-row .mat-mdc-button-base {
-  margin: 8px 8px 8px 0;
+  max-width: 700px;
 }
 
 .example-flex-container {
@@ -128,26 +119,17 @@ color: black;
   justify-content: space-between;
   margin-bottom: auto;
 }
-h4{
-  font-size: 1rem;
-  margin-bottom: auto;
-}
-.mat-divider {
-  margin: 0px 0px;
-}
 .ingredients-container ul {
   list-style: none;
   padding: 0;
 }
 
-
-
-
 @media only screen and (min-width: 375px) and (max-width: 768px) {
   .example-card {
     height: auto;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
+    margin-left: 35px;
   }
   .example-card-container{
     display: flex;
@@ -167,5 +149,12 @@ h4{
 
   p {
     font-size: 14px;
+  }
+  .ingredients-container {
+    flex-direction: column;
+    align-items:flex-start;
+  }
+  .ingredients-container ul {
+    margin-top: 10px;
   }
 }

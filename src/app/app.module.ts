@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CompleteCocktailsComponent } from './cocktails/pages/complete-cocktails/complete-cocktails.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,3 +33,4 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

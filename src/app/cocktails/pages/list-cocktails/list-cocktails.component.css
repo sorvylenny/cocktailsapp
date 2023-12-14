@@ -4,7 +4,8 @@ p{
   text-align: center;
   font-family:'PT Serif, serif';
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  margin-top: 40px;
 }
 .cocktail-header {
   display: flex;
@@ -16,6 +17,12 @@ p{
   max-width: 350px;
   height: auto;
   margin: 0 10px;
+}
+
+label{
+  font-family:'PT Serif, serif';
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 .Input{
@@ -36,6 +43,8 @@ mat-tab-group{
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 .example-card{
   max-width: 400px;
@@ -46,6 +55,7 @@ mat-tab-group{
   font-family:'PT Serif', serif;
   font-weight: 700;
   margin-top: 10px;
+  width: 100%;
 }
 img{
   width: 240px;
@@ -90,6 +100,9 @@ button:hover::before {
   animation: rotate 1s;
   transition: all .5s;
 }
+strong{
+  font-family:'PT Serif', serif;
+}
 
 @keyframes rotate {
   0% {
@@ -100,3 +113,45 @@ button:hover::before {
     transform: rotateY(360deg);
   }
 }
+.example-spacer {
+  flex: 1 1 auto;
+}
+ mat-toolbar{
+  margin-top: 40px;
+ }
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  p{
+    font-size: 0.7rem;
+  }
+
+  .cocktail-header {
+    flex-direction: flex;
+    align-items: center;
+  }
+
+  .left-image,
+  .right-image {
+    max-width: 150px;
+    margin: 10px 0;
+  }
+
+  .example-card {
+    max-width: 100%;
+  }
+
+  img {
+    width: 140px;
+    max-width: none;
+ }
+
+  button {
+    font-size: 0.6rem;
+    width: 50%;
+  }
+  .footer {
+    text-align: center;
+    font: 0.8rem sans-serif;
+  }
+
+}
+

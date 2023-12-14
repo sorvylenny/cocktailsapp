@@ -8,12 +8,12 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSnackBarModule} from '@angular/material/snack-bar'
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { FormsModule } from '@angular/forms';
 
@@ -31,12 +31,12 @@ import { FormsModule } from '@angular/forms';
   MatIconModule,
   MatInputModule,
   MatListModule,
+  MatSlideToggleModule,
   MatSnackBarModule,
   MatSidenavModule,
   MatTabsModule,
   MatTooltipModule,
   MatToolbarModule,
-  MatPaginatorModule,
   MatProgressBarModule,
 
 

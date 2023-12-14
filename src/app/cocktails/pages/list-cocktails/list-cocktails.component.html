@@ -1,3 +1,4 @@
+<app-home></app-home>
 <mat-card>
   <p>Cocktails</p>
   <div class="cocktail-header">
@@ -11,7 +12,7 @@
 
 <div class="Input">
   <mat-form-field appearance="fill" class="full-width">
-    <mat-label>Buscar</mat-label>
+    <mat-label>Search</mat-label>
     <input matInput (keyup.enter)="appSearchTable(input.value)" #input>
   </mat-form-field>
 </div>
@@ -21,15 +22,15 @@
   <h3>Término de búsqueda: {{ searchTerm }}</h3>
 </div>
 
-<mat-tab-group  (selectedIndexChange)="tabChanged($event)">
-  <!-- First Tab: Cocktails by Glass Type -->
-  <mat-tab label="Cocktails by Glass Type">
+<mat-tab-group (selectedIndexChange)="tabChanged($event)">
+  <!-- First Tab: Cocktails -->
+  <mat-tab label="Cocktails">
     <div class="card-container">
       <div *ngFor="let cocktail of cocktailGlassCocktails">
         <mat-card class="example-card">
           <img mat-card-image [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}" (click)="viewDetails(cocktail.idDrink)">
           <mat-card-content>
-            <strong>{{ cocktail.strDrink }}</strong>
+            <strong>{{ cocktail.strDrink | slice:0:21 }}</strong>
           </mat-card-content>
           <mat-card-actions>
             <button mat-button (click)="viewDetails(cocktail.idDrink)">More</button>
@@ -39,14 +40,31 @@
     </div>
   </mat-tab>
 
-  <!-- Second Tab: Ordinary Drinks -->
-  <mat-tab label="Ordinary Drinks">
+  <!-- Second Tab: Cocktails with Alcohol -->
+  <mat-tab label="Cocktails with Alcohol">
     <div class="card-container">
-      <div *ngFor="let cocktail of ordinaryDrinkCocktails">
+      <div *ngFor="let cocktail of alcoholicCocktails">
         <mat-card class="example-card">
           <img mat-card-image [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}" (click)="viewDetails(cocktail.idDrink)">
           <mat-card-content>
-            <strong>{{ cocktail.strDrink }}</strong>
+            <strong>{{ cocktail.strDrink | slice:0:18}}</strong>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button (click)="viewDetails(cocktail.idDrink)">More</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      </div>
+  </mat-tab>
+
+  <!-- Third Tab: Cocktails Alcohol Free -->
+  <mat-tab label="Cocktails Alcohol Free">
+    <div class="card-container">
+      <div *ngFor="let cocktail of nonAlcoholicCocktails">
+        <mat-card class="example-card">
+          <img mat-card-image [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}" (click)="viewDetails(cocktail.idDrink)">
+          <mat-card-content>
+            <strong>{{ cocktail.strDrink | slice:0:18 }}</strong>
           </mat-card-content>
           <mat-card-actions>
             <button mat-button (click)="viewDetails(cocktail.idDrink)">More</button>
@@ -56,3 +74,13 @@
       </div>
   </mat-tab>
 </mat-tab-group>
+
+<!-- Footer with Navigation and Social Icons-->
+<footer>
+  <mat-toolbar>
+    <span class="footer" (click)="scrollToTop()"> <strong>Cocktails</strong> </span>
+    <span class="example-spacer"></span>
+    <span class="footer" (click)="scrollToTop()"><strong>© 2023 Copyright: Realizado por Katherine Flores</strong></span>
+  </mat-toolbar>
+</footer>
+

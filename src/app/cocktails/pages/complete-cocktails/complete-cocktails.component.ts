@@ -24,11 +24,9 @@ export class CompleteCocktailsComponent {
     }
 
     if (this.cocktailId) {
-      // Obtener detalles del cóctel usando el servicio
       this.cocktailService.getCocktailDetailsById(this.cocktailId).subscribe(
         (data) => {
-          console.log('Cocktail Details:', data);
-          this.cocktailDetails = data.drinks ? data.drinks[0] : null;
+         this.cocktailDetails = data.drinks ? data.drinks[0] : null;
         },
         (error) => {
           console.error('Error fetching cocktail details:', error);
@@ -64,4 +62,5 @@ export class CompleteCocktailsComponent {
   goBack() {
     this.router.navigate(['/listCocktails']);
   }
+
 }

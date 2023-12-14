@@ -7,8 +7,8 @@ import { Login } from '../Interfaces/login';
 })
 export class LoginService {
   private user: Login[] = [
-   {id: 1, userName:'User1', email:'user1@example.com', password:'Abc12345'},
-   {id: 2, userName:'User2', email:'user2@example.com', password:'Pass1234'},
+   {id: 1, userName:'Pedro_Perez1', email:'pedro1@example.com', password:'Pedro123'},
+   {id: 2, userName:'Armando_Door2', email:'door2@example.com', password:'Door1234'},
   ];
   private readonly userNameKey = 'userName';
   private readonly userId= 'userId';

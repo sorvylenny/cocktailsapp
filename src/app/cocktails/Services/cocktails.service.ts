@@ -18,20 +18,19 @@ private baseUrl: string= environment.baseUrl;
     const url = `${this.baseUrl}/search.php?s=${name}`;
     return this.http.get(url);
   }
-  getCocktailsByGlass(glassType: string): Observable<Cocktails> {
-    const url = `${this.baseUrl}/filter.php?g=${glassType}`;
+  getCocktailsByGlass(Cocktail: string): Observable<Cocktails> {
+    const url = `${this.baseUrl}/filter.php?c=${Cocktail}`;
     return this.http.get<Cocktails>(url);
   }
-
-  getCocktailsByCategory(Ordinary_Drink: string): Observable<Cocktails> {
-    const url = `${this.baseUrl}/filter.php?c=${Ordinary_Drink}`;
-    return this.http.get<Cocktails>(url);
-  }
-
   getCocktailsByAlcoholic(Alcoholic: string): Observable<Cocktails> {
-    const url = `${this.baseUrl}/filter.php?c=${Alcoholic}`;
-    return this.http.get<Cocktails>(url);
+    const url = `${this.baseUrl}/filter.php?a=${Alcoholic}`;
+     return this.http.get<Cocktails>(url);
   }
+  getCocktailsByNotAlcoholic(Non_Alcoholic: string): Observable<Cocktails> {
+    const url = `${this.baseUrl}/filter.php?a=${Non_Alcoholic}`;
+     return this.http.get<Cocktails>(url);
+  }
+
   getCocktailDetailsById(cocktailId: string): Observable<CocktailDetails> {
     const url = `${this.baseUrl}/lookup.php?i=${cocktailId}`;
     return this.http.get<CocktailDetails>(url);
