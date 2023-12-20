@@ -51,8 +51,9 @@ Cocktails App is a web application designed for exploring and discovering cockta
 ## Usage
 
 1. **Log In**: Sign in using your email and password.
-   email:<pedro1@example.com>, password:<Pedro123> and
-   email:<door2@example.com>,  password:<Door1234>.
+   email:<pedro1@example.com>, password'Pedro123' and
+   email:<door2@example.com>,  password:'Door1234'.
+
 2. **Explore Cocktails**: Discover a wide variety of cocktails on the main page.
 
 3. **Search Functionality**: Use the search feature to find specific cocktails quickly.
